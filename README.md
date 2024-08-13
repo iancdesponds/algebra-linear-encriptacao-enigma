@@ -5,7 +5,8 @@
 - [Gustavo Barroso Cruz](https://github.com/Gubscruz)
 
 
-# O modelo matemático:
+# [Encriptação utilizando Máquina Enigma](https://github.com/iancdesponds/algebra-linear-encriptacao-enigma)
+## O modelo matemático:
 
 ### Matrizes de permutação (P e E):
 Primeiro, nós geramos um vetor de permutação de inteiros de 0 a 25 (assumindo um alfabeto de 26 caracteres), esse vetor vai determinar como as linhas da matriz identidade vão ser misturadas para formar as matrizes de permutação. A matriz identidade de tamanho 26x26 originalmente tem a forma: 
