@@ -9,6 +9,7 @@
 
 ### Matrizes de permutação (P e E):
 Primeiro, nós geramos um vetor de permutação de inteiros de 0 a 25 (assumindo um alfabeto de 26 caracteres), esse vetor vai determinar como as linhas da matriz identidade vão ser misturadas para formar as matrizes de permutação. A matriz identidade de tamanho 26x26 originalmente tem a forma: 
+
 $$
 I = \begin{bmatrix}
 1 & 0 & 0 & \cdots & 0 \\
@@ -18,9 +19,11 @@ I = \begin{bmatrix}
 0 & 0 & 0 & \cdots & 1
 \end{bmatrix}
 $$
+
 (apenas uns na diagonal principal e zeros no resto)
 
 Após a multiplicação pela o vetor permutado, a matriz identidade vai virar uma matriz de permutação, que tem a forma:
+
 $$
 P/E = \begin{bmatrix}
 0 & \cdots & 1 & \cdots & 0 \\
@@ -33,6 +36,7 @@ $$
 
 ### Representando a mensagem como uma matriz:
 Cada letra do alfabeto eh representada por uma matriz 26x1, onde todas as linahs têm valor 0, exceto no index correspondente à letra no dicionário. Por exemplo, a letra 'A' é representada pelo vetor:
+
 $$
 A = \begin{bmatrix}
 1 \\
@@ -42,7 +46,9 @@ A = \begin{bmatrix}
 0
 \end{bmatrix}
 $$
+
 Dessa forma, a mensagem é representada por uma matriz 26xN, onde N é o número de letras na mensagem. Cada coluna dessa matriz é a representação matricial da letra correspondente da mensagem. A mensagem "ABC", por exemplo, seria representada pela matriz:
+
 $$
 M = \begin{bmatrix}
 1 & 0 & 0 \\
@@ -60,6 +66,7 @@ Para encriptar a mensagem, fazemos duas transformações na matriz M:
 2. Multiplicamos a matriz resultante pela matriz de permutação E, que mistura as linhas da matriz resultante da primeira transformação.
 
 Ou seja:
+
 $$
 M_{encriptada} = E \cdot P \cdot M
 $$
@@ -73,6 +80,7 @@ Para decriptar a mensagem, fazemos duas transformações na matriz encriptada:
 2. Após a primeira operação, ficamos com a matriz resultande da multiplicação de M pela matriz de permutação P. Para reverter essa transformação, multiplicamos a matriz resultante pela inversa da matriz de permutação P
 
 Ou seja:
+
 $$
 M_{decriptada} = P^T \cdot E^T \cdot M_{encriptada}
 $$
